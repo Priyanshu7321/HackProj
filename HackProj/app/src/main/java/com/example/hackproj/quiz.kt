@@ -162,7 +162,7 @@ fun formatTime(milliseconds: Long): String {
 suspend fun fetchMcqQuestion(prompt: String): Question? {
     val generativeModel = GenerativeModel(
         modelName = "gemini-1.5-flash",
-        apiKey = "AIzaSyDpJUqT05aR3Wkoappn0xuGWI_k4nqFHKA"
+        apiKey = "my_api_key"
     )
     val response = generativeModel.generateContent(prompt)
     val lines = response.text?.split("\n") ?: return null
